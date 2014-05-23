@@ -1,0 +1,31 @@
+body{
+	width: 80%;
+	margin: 50px auto;
+	text-align: center;
+}
+li{
+	list-style: none;
+}
+td{
+	min-width: 100px;
+}
+.contact{
+	border: 1px #aaa solid;
+	float: left;
+	padding: 40px;
+	width: 150px;
+	height: 80px;
+	border-radius: 3px;
+	margin: 5px;
+	position: relative;
+}
+#wrapper{
+	padding: 10px;
+	border-radius: 5px; 
+}
+.delete{
+	position: absolute;
+	top: 0;
+	right: 2px;
+	cursor: pointer;
+}
