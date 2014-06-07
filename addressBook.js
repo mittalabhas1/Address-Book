@@ -31,10 +31,11 @@ function Book($scope){
 	}
 
 	$scope.loadAddresses = function(){
-		if(localStorage.getItem('people') != 'undefined')
+		if(localStorage.getItem('people') != 'undefined' && localStorage.getItem('people') != null)
 			$scope.addressBook = JSON.parse(localStorage.getItem('people'));
 		else
 			$scope.addressBook = [];
+		console.log($scope.addressBook);
 	}
 
 	$scope.saveAddressBook = function(){
