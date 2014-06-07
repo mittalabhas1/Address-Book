@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="addressBook.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="Book">
+	<div id="inputForm">
+		<form ng-submit="addPerson()">
+			<table>
+				<tr>
+					<td><label for="name">Name</label></td>
+					<td><input type="text" ng-model="temps.name" required></td>
+				</tr>
+				<tr>
+					<td><label for="contact">Contact</label></td>
+					<td><input type="text" ng-model="temps.contact" required></td>
+				</tr>
+				<tr>
+					<td><label for="address">Hometown</label></td>
+					<td><input type="text" ng-model="temps.hometown" required></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div id="wrapper">
+		<div ng-repeat="person in addressBook track by $index" class="contact">
+			<span class="delete" ng-click="deletePersonAtIndex($index)">x</span>
+			<h3>{{$index+1}}. {{person.name}} ({{person.hometown}})</h3>
+			<span>Ph. {{person.contact}}</span>
+		</div>
+	</div>
+</body>
+</html>
